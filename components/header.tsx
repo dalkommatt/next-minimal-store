@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { MainMenu } from './main-menu';
-import { Cart } from './cart';
-import { useState } from 'react';
-import { useCart } from './cart-context';
+import { MainMenu } from "./main-menu";
+import { Cart } from "./cart";
+import { useState } from "react";
+import { useCart } from "./cart-context";
 
 interface HeaderProps {
   isBackVisible: boolean;
@@ -21,6 +21,7 @@ export function Header({ isBackVisible, onBack }: HeaderProps) {
       <div className="flex items-center">
         <MainMenu isBackVisible={isBackVisible} onBack={onBack} />
       </div>
+      <h1 className="text-2xl font-bold text-center uppercase">Pavalti</h1>
       <div className="flex items-center">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -53,6 +54,7 @@ export function Header({ isBackVisible, onBack }: HeaderProps) {
           </svg>
           <span className="ml-1 font-semibold">{totalQuantity}</span>
         </button>
+
         <Cart isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       </div>
     </nav>

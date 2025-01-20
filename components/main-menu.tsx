@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 enum MenuState {
   CLOSED,
@@ -15,17 +15,17 @@ const topBarVariants = {
   closed: {
     rotate: 0,
     translateY: 0,
-    width: '16px',
+    width: "16px",
   },
   open: {
     rotate: 45,
     translateY: 4,
-    width: '16px',
+    width: "16px",
   },
   back: {
     rotate: 45,
     translateY: 7,
-    width: '10px',
+    width: "10px",
   },
 };
 
@@ -33,17 +33,17 @@ const bottomBarVariants = {
   closed: {
     rotate: 0,
     translateY: 0,
-    width: '16px',
+    width: "16px",
   },
   open: {
     rotate: -45,
     translateY: -4,
-    width: '16px',
+    width: "16px",
   },
   back: {
     rotate: -45,
     translateY: -7,
-    width: '10px',
+    width: "10px",
   },
 };
 
@@ -55,7 +55,7 @@ interface MainMenuProps {
 export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
   const pathname = usePathname();
   const defaultMenuState =
-    isBackVisible || pathname.startsWith('/p/')
+    isBackVisible || pathname.startsWith("/p/")
       ? MenuState.BACK
       : MenuState.CLOSED;
 
@@ -82,11 +82,11 @@ export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
   const getVariant = (state: MenuState) => {
     switch (state) {
       case MenuState.OPEN:
-        return 'open';
+        return "open";
       case MenuState.BACK:
-        return 'back';
+        return "back";
       default:
-        return 'closed';
+        return "closed";
     }
   };
 
@@ -96,10 +96,10 @@ export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
         className="p-2 z-20 relative size-12 flex items-center justify-center"
         onClick={handleClick}
         aria-expanded={menuState === MenuState.OPEN}
-        aria-label={menuState === MenuState.BACK ? 'Back' : 'Menu'}
+        aria-label={menuState === MenuState.BACK ? "Back" : "Menu"}
       >
         <span className="sr-only">
-          {menuState === MenuState.BACK ? 'Back' : 'Menu'}
+          {menuState === MenuState.BACK ? "Back" : "Menu"}
         </span>
 
         <div className="size-4 relative flex items-center justify-center">
@@ -132,11 +132,11 @@ export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
             exit={{ opacity: 0, x: -20 }}
           >
             <ul className="flex items-center space-x-2">
-              {['HELP', 'TERMS', 'PRIVACY', 'ABOUT'].map((item, index) => (
+              {["HELP", "TERMS", "PRIVACY", "ABOUT"].map((item, index) => (
                 <motion.li
                   key={item}
                   className={`bg-white px-3 py-1 rounded ${
-                    item === 'PRIVACY' ? 'hidden sm:block' : ''
+                    item === "PRIVACY" ? "hidden sm:block" : ""
                   }`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -144,7 +144,7 @@ export function MainMenu({ isBackVisible, onBack }: MainMenuProps) {
                 >
                   <Link
                     href={`/${item.toLowerCase()}`}
-                    className="text-sm font-mono hover:opacity-70 transition-opacity whitespace-nowrap"
+                    className="text-sm  hover:opacity-70 transition-opacity whitespace-nowrap"
                   >
                     {item}
                   </Link>

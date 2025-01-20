@@ -1,13 +1,13 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Privacy - NEXYZY',
-  description: 'Privacy policy for NEXYZY.',
+  title: "Privacy - VENZARE",
+  description: "Privacy policy for VENZARE.",
 };
 
 export default function PrivacyPage() {
   return (
-    <div className="mt-12 space-y-12 font-mono max-w-[700px] mx-auto">
+    <div className="mt-12 space-y-12  max-w-[700px] mx-auto">
       <h1 className="text-xl">PRIVACY</h1>
 
       <section className="space-y-4">

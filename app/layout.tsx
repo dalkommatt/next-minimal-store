@@ -1,16 +1,21 @@
-import './globals.css';
-import { GeistMono } from 'geist/font/mono';
-import { Metadata, Viewport } from 'next';
-import { CartProvider } from '@/components/cart-context';
+import "./globals.css";
+import { Metadata, Viewport } from "next";
+import { CartProvider } from "@/components/cart-context";
+import { Playfair_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: 'NEXYZY',
-  description: 'Inspired by yeezy.com, built with Next.js.',
+  title: "VENZARE",
+  description: "Inspired by yeezy.com, built with Next.js.",
 };
 
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF',
+  themeColor: "#FFFFFF",
 };
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function RootLayout({
   children,
@@ -19,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistMono.className}`}>
+      <body className={`${playfairDisplay.className}`}>
         <CartProvider>
           <div className="flex flex-col min-h-screen h-screen mx-5 overflow-y-scroll">
             {children}

@@ -1,6 +1,6 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fnextzy)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fvenzare)
 
-# Nextzy - Minimal Ecommerce Store with Next.js
+# venzare - Minimal Ecommerce Store with Next.js
 
 This is a clone of the Yeezy store built with Next.js, Tailwind CSS, shadcn/ui, and Motion.
 

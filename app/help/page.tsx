@@ -1,13 +1,13 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Help - NEXYZY',
-  description: 'Help and support information for NEXYZY.',
+  title: "Help - VENZARE",
+  description: "Help and support information for VENZARE.",
 };
 
 export default function HelpPage() {
   return (
-    <div className="mt-12 space-y-12 font-mono max-w-[700px] mx-auto">
+    <div className="mt-12 space-y-12  max-w-[700px] mx-auto">
       <h1 className="text-xl">HELP</h1>
 
       <section className="space-y-4">
@@ -23,7 +23,7 @@ export default function HelpPage() {
         <h2 className="text-lg">ORDER ISSUES</h2>
         <p className="leading-relaxed">
           For any issues with your order (e.g., wrong item or defective
-          product), contact us at noreply@nextzy.com
+          product), contact us at help@venzare.com
         </p>
         <p className="leading-relaxed">
           Please include your order number and details of the issue.

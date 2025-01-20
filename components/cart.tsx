@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
-import { ChevronRight, Minus, Plus } from 'lucide-react';
-import { useCart } from './cart-context';
-import { SIZES } from './add-to-cart';
+import Image from "next/image";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import { ChevronRight, Minus, Plus } from "lucide-react";
+import { useCart } from "./cart-context";
+import { SIZES } from "./add-to-cart";
 
 export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
   const { items, updateQuantity, total } = useCart();
@@ -32,27 +32,25 @@ export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
                 </div>
                 <div className="flex flex-col justify-between py-1 flex-1">
                   <div className="space-y-1">
-                    <p className="font-mono uppercase text-sm">
-                      {item.id.split('-').slice(0, -1).join('-')}
+                    <p className=" uppercase text-sm">
+                      {item.id.split("-").slice(0, -1).join("-")}
                     </p>
-                    <p className="font-mono">
+                    <p className="">
                       $
-                      {item.id.startsWith('sk')
-                        ? item.id.includes('gray')
-                          ? '40'
-                          : '20'
-                        : '20'}
+                      {item.id.startsWith("sk")
+                        ? item.id.includes("gray")
+                          ? "40"
+                          : "20"
+                        : "20"}
                     </p>
                   </div>
                   <div className="space-y-1">
                     <div className="flex items-center justify-between">
-                      <p className="font-mono text-sm">SIZE</p>
-                      <p className="font-mono text-sm">
-                        {SIZES[item.size].label}
-                      </p>
+                      <p className=" text-sm">SIZE</p>
+                      <p className=" text-sm">{SIZES[item.size].label}</p>
                     </div>
                     <div className="flex items-center justify-between">
-                      <p className="font-mono text-sm">QTY</p>
+                      <p className=" text-sm">QTY</p>
                       <div className="flex items-center gap-4">
                         <button
                           className="p-1"
@@ -60,7 +58,7 @@ export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
                         >
                           <Minus className="h-3 w-3" />
                         </button>
-                        <span className="font-mono">{item.quantity}</span>
+                        <span className="">{item.quantity}</span>
                         <button
                           className="p-1"
                           onClick={() => updateQuantity(item.id, item.size, 1)}
@@ -77,17 +75,17 @@ export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
           <div className="border-t">
             <div className="p-8 space-y-4">
               <div className="flex justify-between items-center">
-                <p className="font-mono uppercase">Total</p>
-                <p className="font-mono">${total}</p>
+                <p className=" uppercase">Total</p>
+                <p className="">${total}</p>
               </div>
-              <p className="font-mono text-sm text-muted-foreground">
+              <p className=" text-sm text-muted-foreground">
                 TAX AND SHIPPING NOT INCLUDED
               </p>
               <a
                 href="https://www.yeezy.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between bg-black text-white p-4 font-mono"
+                className="w-full flex items-center justify-between bg-black text-white p-4 "
               >
                 CONTINUE
                 <ChevronRight className="h-4 w-4" />

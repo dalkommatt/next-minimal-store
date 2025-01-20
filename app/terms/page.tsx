@@ -1,19 +1,19 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Terms - NEXYZY',
-  description: 'Terms and conditions for NEXYZY.',
+  title: "Terms - VENZARE",
+  description: "Terms and conditions for VENZARE.",
 };
 
 export default function TermsPage() {
   return (
-    <div className="mt-12 space-y-12 font-mono max-w-[700px] mx-auto">
+    <div className="mt-12 space-y-12  max-w-[700px] mx-auto">
       <h1 className="text-xl">TERMS</h1>
 
       <section className="space-y-4">
         <h2 className="text-lg">TERMS OF SERVICE</h2>
         <p className="leading-relaxed">
-          By accessing and placing an order with NEXYZY, you confirm that you
+          By accessing and placing an order with VENZARE, you confirm that you
           are in agreement with and bound by the terms and conditions contained
           herein.
         </p>

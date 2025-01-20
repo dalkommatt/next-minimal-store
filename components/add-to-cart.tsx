@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useState, useCallback } from 'react';
-import { X } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Cart } from '@/components/cart';
-import { type Product } from '@/lib/products';
-import { useCart } from './cart-context';
+import { useState, useCallback } from "react";
+import { X } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { Cart } from "@/components/cart";
+import { type Product } from "@/lib/products";
+import { useCart } from "./cart-context";
 
 export const SIZES = [
-  { label: 'S-M', value: 0 },
-  { label: 'M-L', value: 1 },
-  { label: 'XL-XXL', value: 2 },
+  { label: "S-M", value: 0 },
+  { label: "M-L", value: 1 },
+  { label: "XL-XXL", value: 2 },
 ];
 
 export function AddToCart({ product }: { product: Product }) {
@@ -24,13 +24,13 @@ export function AddToCart({ product }: { product: Product }) {
       setIsSelectingSize(false);
       setIsCartOpen(true);
     },
-    [addToCart, product],
+    [addToCart, product]
   );
 
   const productName = product.id
-    .split('-')
+    .split("-")
     .slice(0, -1)
-    .join('-')
+    .join("-")
     .toUpperCase();
 
   return (
@@ -44,7 +44,7 @@ export function AddToCart({ product }: { product: Product }) {
         <motion.div
           className="flex flex-col items-center"
           initial={false}
-          animate={isSelectingSize ? 'selecting' : 'idle'}
+          animate={isSelectingSize ? "selecting" : "idle"}
         >
           {/* Product Name / Select Size */}
           <motion.div
@@ -55,32 +55,32 @@ export function AddToCart({ product }: { product: Product }) {
             }}
           >
             <motion.p
-              className="font-medium font-mono uppercase absolute inset-0 flex items-center justify-center"
+              className="font-medium  uppercase absolute inset-0 flex items-center justify-center"
               variants={{
                 idle: { y: 0 },
-                selecting: { y: '-100%' },
+                selecting: { y: "-100%" },
               }}
-              transition={{ type: 'tween', ease: 'easeInOut', duration: 0.2 }}
+              transition={{ type: "tween", ease: "easeInOut", duration: 0.2 }}
             >
               {productName}
             </motion.p>
             <motion.div
               className="flex items-center justify-between w-full absolute inset-0"
               variants={{
-                idle: { y: '100%' },
+                idle: { y: "100%" },
                 selecting: { y: 0 },
               }}
-              transition={{ type: 'tween', ease: 'easeInOut', duration: 0.2 }}
+              transition={{ type: "tween", ease: "easeInOut", duration: 0.2 }}
             >
               <div className="w-8" />
-              <p className="font-medium font-mono uppercase">SELECT SIZE</p>
+              <p className="font-medium  uppercase">SELECT SIZE</p>
               <motion.div
                 className="size-8"
                 variants={{
-                  idle: { x: '-50%', y: 28, opacity: 0 },
+                  idle: { x: "-50%", y: 28, opacity: 0 },
                   selecting: { x: 0, y: 0, opacity: 1 },
                 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
               >
                 <button
                   onClick={() => setIsSelectingSize(false)}
@@ -132,24 +132,24 @@ export function AddToCart({ product }: { product: Product }) {
                     <motion.button
                       key={size.value}
                       onClick={() => handleAddToCart(size.value)}
-                      className="w-16 h-12 bg-transparent hover:bg-black hover:text-white transition-colors font-mono text-sm font-semibold"
+                      className="w-16 h-12 bg-transparent hover:bg-black hover:text-white transition-colors  text-sm font-semibold"
                       variants={{
                         hidden: {
-                          x: 'calc(50% - 32px)',
+                          x: "calc(50% - 32px)",
                           y: 0,
                           opacity: 0,
                         },
                         visible: {
                           x:
                             index === 0
-                              ? '0'
+                              ? "0"
                               : index === 2
-                                ? 'calc(100% - 64px)'
-                                : 'calc(50% - 32px)',
+                              ? "calc(100% - 64px)"
+                              : "calc(50% - 32px)",
                           y: 0,
                           opacity: 1,
                           transition: {
-                            type: 'spring',
+                            type: "spring",
                             stiffness: 120,
                             damping: 20,
                             mass: 1,
