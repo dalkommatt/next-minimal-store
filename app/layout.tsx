@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
 };
-sd
+
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: "400",
