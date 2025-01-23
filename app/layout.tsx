@@ -4,14 +4,14 @@ import { CartProvider } from "@/components/cart-context";
 import { Playfair_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "VENZARE",
-  description: "Inspired by yeezy.com, built with Next.js.",
+  title: "PAVALTI",
+  description: "Classy and chic.",
 };
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
 };
-
+sd
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: "400",

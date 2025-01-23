@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - VENZARE",
-  description: "About VENZARE - A minimalist ecommerce experience.",
+  title: "About - PAVALTI",
+  description: "About PAVALTI - A minimalist ecommerce experience.",
 };
 
 export default function AboutPage() {
@@ -11,9 +11,9 @@ export default function AboutPage() {
       <h1 className="text-xl">ABOUT</h1>
 
       <section className="space-y-4">
-        <h2 className="text-lg">VENZARE</h2>
+        <h2 className="text-lg">PAVALTI</h2>
         <p className="leading-relaxed">
-          VENZARE is a minimalist ecommerce template inspired by the design
+          PAVALTI is a minimalist ecommerce template inspired by the design
           principles of simplicity and functionality. Built with Next.js and
           modern web technologies, it offers a streamlined shopping experience
           focused on essential clothing items.
@@ -23,7 +23,7 @@ export default function AboutPage() {
       <section className="space-y-4">
         <h2 className="text-lg">TECHNOLOGY</h2>
         <p className="leading-relaxed">
-          Built using Next.js App Router, TypeScript, and Tailwind CSS, VENZARE
+          Built using Next.js App Router, TypeScript, and Tailwind CSS, PAVALTI
           represents a modern approach to ecommerce, prioritizing performance
           and user experience.
         </p>

@@ -67,6 +67,8 @@ create table colors (
   id serial primary key,
   -- The color name, e.g. "Red", "Blue", "Green".
   name text not null unique
+  -- Pantone color code, e.g. "PMS 1234".
+  pantone text not null unique
 )
 alter table colors enable row level security;
 create policy "Allow public read-only access." on colors for select using (true);

@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy - VENZARE",
-  description: "Privacy policy for VENZARE.",
+  title: "Privacy - PAVALTI",
+  description: "Privacy policy for PAVALTI.",
 };
 
 export default function PrivacyPage() {
